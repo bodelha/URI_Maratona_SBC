@@ -1,0 +1,1 @@
+print (f"MEDIA = {(3.5*eval(input())+7.5*eval(input()))/11:.5f}")
