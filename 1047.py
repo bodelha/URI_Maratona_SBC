@@ -1,10 +1,6 @@
 ah, am, bh, bm = map(int, input().split())
 
-dm = bm - am
-dh = bh - ah
-if dm <  0:
-    dh -= 1
-    dm += 60
-if (dm == 0 and dh == 0) or dh < 0:
-    dh += 24
-print (f"O JOGO DUROU {dh} HORA(S) E {dm} MINUTO(S)")
+tempo = (bm - am) + (bh - ah)*60
+if tempo <= 0:
+    tempo += 24*60
+print (f"O JOGO DUROU {tempo//60} HORA(S) E {tempo%60} MINUTO(S)")
