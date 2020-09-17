@@ -1,15 +1,4 @@
-digitos = {
-    1:"*. .. ..",
-    2:"*. *. ..",
-    3:"** .. ..",
-    4:"** .* ..",
-    5:"*. .* ..",
-    6:"** *. ..",
-    7:"** ** ..",
-    8:"*. ** ..",
-    9:".* *. ..",
-    0:".* ** .."
-    }
+digitos = ['.* ** ..', '*. .. ..', '*. *. ..', '** .. ..', '** .* ..', '*. .* ..', '** *. ..', '** ** ..', '*. ** ..', '.* *. ..']
 
 out = []
 
@@ -37,7 +26,7 @@ while True:
         texto = ""
         for i in range (0, len(linha1), 3):
             numero = linha1[i: i+2] + " " + linha2[i: i+2] + " " + linha3[i: i+2]
-            texto += str(list(digitos.keys()) [list(digitos.values()).index(numero)])
+            texto += str(digitos.index (numero))
         out.append(texto)
 
 
