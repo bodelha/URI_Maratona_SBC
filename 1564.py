@@ -1,10 +1,9 @@
 out = []
+saida = {0:"vai ter duas!", 1:"vai ter copa!"}
 while True:
     try:
-        if input() == "0":
-            out.append("vai ter copa!")
-        else:
-            out.append("vai ter duas!")
+        out.append(saida [input() == "0"])
     except EOFError:
         break
-print (*out, sep="\n")
+
+print (*out, sep='\n')
