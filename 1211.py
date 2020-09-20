@@ -8,13 +8,11 @@ while True:
             numeros.append(input())
         numeros.sort()
 
-        while len(numeros) >= 2:
-            for i in range(len(numeros[1])):
-                if numeros[1][i] == numeros[0][i]:
-                    count += 1
-                else:
-                    break
-            del numeros[0]
+        for i in range (len(numeros[0])):
+            coluna = [numeros[j][i] for j in range(len(numeros))]
+            test = [coluna[m] == coluna [m+1] for m in range(len(coluna)-1)]
+            count += sum(test)
+
         out.append(count)
     except EOFError:
         break
