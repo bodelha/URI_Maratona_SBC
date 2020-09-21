@@ -1,8 +1,8 @@
 def fatorial (n):
-    if n - 2 == 1:
-        return n * (n-1)
-    else:
-        return n * fatorial (n-1)
-        
+    fator = 1
+    while n != 1:
+        fator *= n
+        n -= 1
+    return fator
 
 print (fatorial (int(input())))
