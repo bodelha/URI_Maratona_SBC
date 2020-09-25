@@ -1,11 +1,11 @@
+#Python 3.4
+notas = [100, 50, 20, 10, 5, 2]
 n = int(input())
-print ("{}\n{} nota(s) de R$ 100,00\n{} nota(s) de R$ 50,00\n{} nota(s) de R$ 20,00\n{} nota(s) de R$ 10,00\n{} nota(s) de R$ 5,00\n{} nota(s) de R$ 2,00\n{} nota(s) de R$ 1,00".format(
-    n,
-    n//100,
-    (n%100)//50,
-    ((n%100)%50)//20,
-    (((n%100)%50)%20)//10,
-    ((((n%100)%50)%20)%10)//5,
-    (((((n%100)%50)%20)%10)%5)//2,
-    (((((n%100)%50)%20)%10)%5)%2
-))
+out = [n]
+
+for nota in notas:
+    out.append(str(n//nota) + ' nota(s) de R$ ' + str(nota) + ',00')
+    n = n % nota
+out.append(str(n) + ' nota(s) de R$ 1,00')
+
+print (*out, sep='\n')
